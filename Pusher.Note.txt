@@ -1,0 +1,35 @@
+
+
+this is simple integration steps
+
+there is no configuration is required outside the .env file
+simply follow the step on laravel 
+copy the connection strings without host from the pusher and paste into .env
+mamke the event trigger the event
+and listen on the frontend in vuejs
+just uncomment the existed code in echo.js or bootstrap.js
+
+
+the event name and channel name are the same as we mentioned in the our event created in application startup
+we use these names and channel names to listen the event on the channel in vuejs
+
+connect database and migrate it 
+
+
+the most important things    define the Vite_Env e.g vite environment variable in .env
+like vite is getting the pusher id or secret from the .env file
+
+
+additional debuggin and connection check look into the browser console of ws tab and
+
+
+you can also install the laravel telescope 
+make migrate after installing  laravel telescope 
+then go to the url /telescope and you will get the status of the event triggered 
+
+if the event is pending or queqing you have to start the laravel queque worker and
+her eis the command to start the laravel queque worker
+
+
+
+php artisan queue:work --queue=high,default  (start the queque worker) important
