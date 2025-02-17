@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Events\Event2x;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +15,14 @@ use App\Events\Event2x;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view("Home");
 });
 
 
-Route::get('b2',function(){
-    event(new Event2x('hello world'));
-});
+Route::post('sendEvent', function (Request $request) {
+    $message = $request->message;
+    event(new Event2x($message));
+    return "Message Sent Successfully";
+}); 
+

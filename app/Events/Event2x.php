@@ -19,7 +19,7 @@ class Event2x implements ShouldBroadcast
 
   public function broadcastOn()
   {
-      return ['Channel2x'];
+      return ['Channel2xxx'];
   }
 
   public function broadcastAs()

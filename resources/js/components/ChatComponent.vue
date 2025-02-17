@@ -29,7 +29,7 @@ onMounted(() => {
         console.error('Failed to parse event data:', e.data, error)
       }
     })
-})
+}) 
 
 
 function sendMessage() {
